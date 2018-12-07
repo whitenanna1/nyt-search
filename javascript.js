@@ -21,10 +21,11 @@
 
             
 
-        })
+
+        }
 
         
-        // })
+        })
         //clearResults
         //searchTerm
         //numRecords
