@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script>
+        // $('search').on('click', function() {
+
+        // var search = $('#searchTerm').val();
+        var searchTerm = 'george bush'
+        var queryURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=83683e6f21874fe28ac4855fd25e2dbc&q=' + searchTerm + '&apikey=83683e6f21874fe28ac4855fd25e2dbc'
+
+        $.ajax({
+        url: queryURL,
+        method: 'GET',
+        }).done(function(result) {
+        console.log(result);
+        }).fail(function(err) {
+        throw err;
+        }).then(function(response) {
+            for (var i = 0; i < 6; )
+
+        })
+
+
+        // })
+        console.log(queryURL);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
