@@ -1,8 +1,10 @@
-        // $('search').on('click', function() {
+        $('#search').on('click', function() {
 
-        // var search = $('#search').val();
-        var searchTerm = 'george bush'
-        var queryURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=83683e6f21874fe28ac4855fd25e2dbc&q=' + searchTerm + '&apikey=83683e6f21874fe28ac4855fd25e2dbc'
+        var searchTerm = $('#search').val();
+        // var searchTerm = 'george bush';
+        var queryURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=83683e6f21874fe28ac4855fd25e2dbc&q=' + searchTerm + '&apikey=83683e6f21874fe28ac4855fd25e2dbc';
+
+        var numSelected = $('#numSelected').val();
 
         $.ajax({
         url: queryURL,
@@ -18,13 +20,10 @@
                 console.log(result.response.docs[i]);
                 $('#articleResults').append('title: ' + result.response.docs[i].snippet);
                 console.log(results.response.doc[i].snippet)
+                $('#articleResults').append('url: ' + results.response.docs[i].web_url);
+                console.log(results.response.docs[i].web_url)
+            }
 
-            
-
-
-        }
-
-        
         })
         //clearResults
         //searchTerm
@@ -35,4 +34,4 @@
         //search buttpn = search
         //clear
         //articleResults
-        console.log(queryURL);
+        console.log(queryURL)
