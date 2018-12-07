@@ -15,7 +15,7 @@
             
             for (var i = 0; i < 6; i++) {
                 console.log(result.response);
-                console.log(result.response.doc[1]);
+                console.log(result.response.docs[1]);
             }
 
         })
